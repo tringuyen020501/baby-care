@@ -15,7 +15,9 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
-      <div className="logo">bubaby</div>
+      <div className="logo">
+        <img />
+      </div>
 
       <nav className={`nav ${isMenuOpen ? "show" : ""}`}>
         <a href="#home">Chuyên nhà BU</a>

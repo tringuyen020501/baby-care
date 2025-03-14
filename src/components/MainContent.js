@@ -11,7 +11,7 @@ const MainContent = () => {
           <h1>VISION</h1>
           <h2>COLLECTION</h2>
           <p>ABRIALD</p>
-          <button className="cta-button">Xem ngay</button>
+          {/* <button className="cta-button">Xem ngay</button> */}
         </div>
       </div>
     </main>

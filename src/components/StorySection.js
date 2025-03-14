@@ -5,7 +5,7 @@ const StorySection = () => {
   return (
     <section className="story-section">
       <div className="story-container">
-        <h2 className="section-title">Chuyện nhà BU</h2>
+        <h2 className="section-title">Chuyện nhà BabyCare</h2>
 
         <div className="content-wrapper">
           <div className="story-image">
@@ -25,13 +25,13 @@ const StorySection = () => {
             </p>
           </div>
 
-          <div className="more-links">
+          {/* <div className="more-links">
             <h3>Xem thêm</h3>
             <ul className="link-list">
               <li>NEW ABOUTALS</li>
               <li>Cris-Phois</li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

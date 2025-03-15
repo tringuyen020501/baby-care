@@ -64,6 +64,7 @@ body.loaded .nav-bar.scrolled {
 .nav-links {
     display: flex;
     gap: 20px;
+    font-size: 18px;
 }
 .nav-links a {
     text-decoration: none;

@@ -27,7 +27,7 @@ const BabyCare = () => {
         <div className="nav-right">
           <div className="nav-links">
             <span>
-              <Link to="/story">Chuyên nhà BabyCare</Link>
+              <Link to="/story">Chuyện nhà BabyCare</Link>
             </span>
             <span>
               <Link>Dịch vụ</Link>

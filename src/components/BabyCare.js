@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const BabyCare = () => {
@@ -25,11 +26,21 @@ const BabyCare = () => {
 
         <div className="nav-right">
           <div className="nav-links">
-            <span>Chuyên nhà BabyCare</span>
-            <span>Dịch vụ</span>
-            <span>Cam Kết An Toàn</span>
-            <span>Blog</span>
-            <span>Connect</span>
+            <span>
+              <Link to="/story">Chuyên nhà BabyCare</Link>
+            </span>
+            <span>
+              <Link>Dịch vụ</Link>
+            </span>
+            <span>
+              <Link to="/safe">Cam kết an toàn</Link>
+            </span>
+            <span>
+              <Link to="/blog">Blog</Link>
+            </span>
+            <span>
+              <Link to="/connect">Connect</Link>
+            </span>
           </div>
         </div>
       </nav>

@@ -17,7 +17,7 @@ const StorySection = () => {
           </div>
           <div className="text-content">
             <p className="story-text">
-              BU Baby là thương hiệu đầu tiên tại Việt Nam đạt chuẩn quốc tế
+              BabyCare là thương hiệu đầu tiên tại Việt Nam đạt chuẩn quốc tế
               OEKO-TEX 100 cấp độ 1 - cấp độ an toàn nhất dành cho trẻ sơ sinh.
               Từng thiết kế của BU chất chứa mong muốn của một người mẹ với mong
               muốn con mình được bảo vệ từ những điều nhỏ nhất trong những năm

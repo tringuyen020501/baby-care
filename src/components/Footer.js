@@ -5,7 +5,6 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer-container">
-      {/* Phần Đăng ký nhận tin */}
       <div className="newsletter-section">
         <h2>Đăng ký nhận tin</h2>
         <div className="newsletter-form">
@@ -24,7 +23,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Thông tin */}
         <div className="footer-col">
           <h3>Thông tin</h3>
           <ul>
@@ -35,7 +33,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Hỗ trợ */}
         <div className="footer-col">
           <h3>Hỗ trợ</h3>
           <ul>
@@ -44,7 +41,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Liên hệ */}
         <div className="footer-col contact-info">
           <h3>Liên hệ</h3>
           <div className="contact-item">

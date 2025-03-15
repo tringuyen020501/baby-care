@@ -4,7 +4,7 @@ import "../App.css";
 const StorySection = () => {
   return (
     <section className="story-section">
-      <div className="story-container">
+      <div className="story-container-section">
         <h2 className="section-title">Chuyện nhà BabyCare</h2>
 
         <div className="content-wrapper">

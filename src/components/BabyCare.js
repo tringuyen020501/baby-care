@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 const BabyCare = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -47,9 +47,9 @@ const BabyCare = () => {
           </div>
         </div>
       </nav>
-      <div className="mobile-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      {/* <div className="mobile-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         ☰
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div className="main-content">

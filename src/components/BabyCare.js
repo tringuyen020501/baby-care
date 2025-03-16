@@ -30,10 +30,13 @@ const BabyCare = () => {
               <Link to="/story">Chuyện nhà BabyCare</Link>
             </span>
             <span>
-              <Link>Dịch vụ</Link>
+              <Link to="/service">Dịch vụ</Link>
             </span>
             <span>
               <Link to="/safe">Cam kết an toàn</Link>
+            </span>
+            <span>
+              <Link to="/info">Thông tin </Link>
             </span>
             <span>
               <Link to="/blog">Blog</Link>

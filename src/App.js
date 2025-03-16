@@ -9,6 +9,8 @@ import "./App.css";
 import Story from "./components/Story";
 import Blog from "./components/Blog";
 import Connect from "./components/Connect";
+import ServicePage from "./components/ServicePage";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/story" element={<Story />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/connect" element={<Connect />} />
+          <Route path="/service" element={<ServicePage />} />
+          <Route path="/info" element={<Gallery />} />
         </Routes>
       </Router>
       <SupportButton />

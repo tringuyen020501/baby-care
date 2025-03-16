@@ -45,10 +45,7 @@ const Footer = () => {
           <h3>Liên hệ</h3>
           <div className="contact-item">
             <FaMapMarkerAlt className="icon" />
-            <p>CÔNG TY BABYCARE VIỆT NAM</p>
-          </div>
-          <div className="contact-item">
-            <span>Mã số doanh nghiệp: 0107678704</span>
+            <p>BABYCARE VIỆT NAM</p>
           </div>
           <div className="contact-item">
             <span>Địa chỉ: Trường đại học FPT</span>

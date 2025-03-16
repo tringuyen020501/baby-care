@@ -1,9 +1,11 @@
 import React from "react";
 import "../App.css";
+import BackButton from "./BackButton";
 
 const SafetyCommitment = () => {
   return (
     <div className="safety-container">
+      <BackButton />
       <div className="safety-content">
         <h1>Mẹ thông thái lựa chọn BabyCare</h1>
         <p className="commitment-text">

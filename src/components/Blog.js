@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { FaArrowRight } from "react-icons/fa";
+import BackButton from "./BackButton";
 
 const Blog = () => {
   const blogPosts = [
@@ -44,6 +45,7 @@ const Blog = () => {
 
   return (
     <section className="blog-container">
+      <BackButton />
       <div className="blog-header">
         <h1>Cùng mẹ chăm con khoa học</h1>
       </div>

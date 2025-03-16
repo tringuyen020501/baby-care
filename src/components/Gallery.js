@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import BackButton from "./BackButton";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -41,6 +42,7 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
+      <BackButton />
       <div className="image-grid">
         {images.map((img, index) => (
           <div

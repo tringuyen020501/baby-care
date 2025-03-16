@@ -3,10 +3,12 @@ import "../App.css";
 import { FaHeart } from "react-icons/fa";
 import { MdHistoryToggleOff } from "react-icons/md";
 import { FaHeartPulse } from "react-icons/fa6";
+import BackButton from "./BackButton";
 
 const Story = () => {
   return (
     <section className="story-container">
+      <BackButton />
       <div className="story-header">
         <h1>Chuyện nhà BabyCare</h1>
       </div>

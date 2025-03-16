@@ -3,6 +3,7 @@ import { signInWithGoogle, auth } from "../components/firebase/firebase";
 import ServiceModal from "../components/firebase/ServiceModal";
 import ConfirmationModal from "./ConfirmModal";
 import "../App.css";
+import BackButton from "./BackButton";
 
 const ServicePage = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -65,8 +66,8 @@ const ServicePage = () => {
 
   return (
     <div className="service-page">
+      <BackButton />
       <h1>Dịch vụ của chúng tôi</h1>
-
       <div className="services-grid">
         {services.map((service) => (
           <div key={service.id} className="service-card">

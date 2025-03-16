@@ -1,10 +1,12 @@
 import React from "react";
 import "../App.css";
 import { GiClothes, GiPresent, GiHeartPlus } from "react-icons/gi";
+import BackButton from "./BackButton";
 
 const Connect = () => {
   return (
     <section className="activities-container">
+      <BackButton />
       <h1 className="main-title">CÁC HOẠT ĐỘNG KHÁC</h1>
 
       <div className="activity-content">

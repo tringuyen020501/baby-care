@@ -1,13 +1,12 @@
 // BabyCare.jsx
 import React from "react";
-import Navbar from "./Navbar";
 import "../App.css";
 
-const BabyCare = () => {
+const MainContent = () => {
   return (
     <div className="container">
       <div className="background-image"></div>
-      <Navbar />
+      {/* Main Content */}
       <div className="main-content">
         <div className="vision-section">
           <h1>Vision</h1>
@@ -20,4 +19,4 @@ const BabyCare = () => {
   );
 };
 
-export default BabyCare;
+export default MainContent;

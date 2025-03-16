@@ -3,7 +3,7 @@ import { signInWithGoogle, auth } from "../components/firebase/firebase";
 import ServiceModal from "../components/firebase/ServiceModal";
 import ConfirmationModal from "./ConfirmModal";
 import "../App.css";
-import BackButton from "./BackButton";
+import Navbar from "./Navbar";
 
 const ServicePage = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -22,18 +22,21 @@ const ServicePage = () => {
       description:
         "Dọn nhà, nấu ăn, rửa bát và đổ rác theo khung giờ linh hoạt",
       type: "hourly",
+      image: "https://picsum.photos/400/300?random=1",
     },
     {
       id: 2,
       title: "Giúp việc theo ngày",
       description: "Dịch vụ định kỳ hàng tuần đảm bảo nhà cửa luôn sạch sẽ",
       type: "daily",
+      image: "https://picsum.photos/400/300?random=2",
     },
     {
       id: 3,
       title: "Giúp việc theo tháng",
       description: "Tổng vệ sinh chuyên sâu phù hợp cho không gian lớn",
       type: "monthly",
+      image: "https://picsum.photos/400/300?random=3",
     },
   ];
 
@@ -53,51 +56,52 @@ const ServicePage = () => {
       }
     }
 
-    // Lưu thông tin đặt lịch
     setBookingDetails({
       serviceType: selectedService,
       timeOption: timeOption,
     });
 
-    // Đóng modal chọn thời gian và hiển thị modal xác nhận
     setShowModal(false);
     setShowConfirmationModal(true);
   };
 
   return (
-    <div className="service-page">
-      <BackButton />
-      <h1>Dịch vụ của chúng tôi</h1>
-      <div className="services-grid">
-        {services.map((service) => (
-          <div key={service.id} className="service-card">
-            <h2>{service.title}</h2>
-            <p>{service.description}</p>
-            <button
-              onClick={() => handleBooking(service.type)}
-              className="booking-button"
-            >
-              Đặt dịch vụ ngay
-            </button>
-          </div>
-        ))}
+    <div>
+      <Navbar color="#BCD5E3" />
+      <div className="service-page">
+        <h1>Dịch vụ của chúng tôi</h1>
+        <div className="services-grid">
+          {services.map((service) => (
+            <div key={service.id} className="service-card">
+              <img src={service.image} className="service-image" />
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
+              <button
+                onClick={() => handleBooking(service.type)}
+                className="booking-button"
+              >
+                Đặt dịch vụ ngay
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {showModal && (
+          <ServiceModal
+            serviceType={selectedService}
+            onClose={() => setShowModal(false)}
+            onConfirm={handleConfirm}
+          />
+        )}
+
+        {showConfirmationModal && (
+          <ConfirmationModal
+            bookingDetails={bookingDetails}
+            user={user}
+            onClose={() => setShowConfirmationModal(false)}
+          />
+        )}
       </div>
-
-      {showModal && (
-        <ServiceModal
-          serviceType={selectedService}
-          onClose={() => setShowModal(false)}
-          onConfirm={handleConfirm}
-        />
-      )}
-
-      {showConfirmationModal && (
-        <ConfirmationModal
-          bookingDetails={bookingDetails}
-          user={user}
-          onClose={() => setShowConfirmationModal(false)}
-        />
-      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import { FaArrowRight } from "react-icons/fa";
-import BackButton from "./BackButton";
+import Navbar from "./Navbar";
 
 const Blog = () => {
   const blogPosts = [
@@ -44,30 +44,31 @@ const Blog = () => {
   ];
 
   return (
-    <section className="blog-container">
-      <BackButton />
-      <div className="blog-header">
-        <h1>Cùng mẹ chăm con khoa học</h1>
-      </div>
-
-      <div className="blog-grid">
-        {blogPosts.map((post, index) => (
-          <article className="blog-card" key={index}>
-            <div className="blog-image">
-              <img src={post.img} alt={post.title} />
-            </div>
-            <div className="blog-content">
-              <span className="blog-category">{post.category}</span>
-              <h3>{post.title}</h3>
-              <p>{post.content}</p>
-              <button className="read-more">
-                Xem thêm <FaArrowRight className="arrow-icon" />
-              </button>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
+    <div>
+      <Navbar color="#BCD5E3" />
+      <section className="blog-container">
+        <div className="blog-header">
+          <h1>Cùng mẹ chăm con khoa học</h1>
+        </div>
+        <div className="blog-grid">
+          {blogPosts.map((post, index) => (
+            <article className="blog-card" key={index}>
+              <div className="blog-image">
+                <img src={post.img} alt={post.title} />
+              </div>
+              <div className="blog-content">
+                <span className="blog-category">{post.category}</span>
+                <h3>{post.title}</h3>
+                <p>{post.content}</p>
+                <button className="read-more">
+                  Xem thêm <FaArrowRight className="arrow-icon" />
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

@@ -31,7 +31,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 50px;
+    padding: 10px 80px;
     background: transparent;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
@@ -98,16 +98,6 @@ body.loaded .nav-bar.scrolled {
     color: #646464
 }
 
-/* .cta-button {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-} */
 .vision-section h1 {
     font-size: 4rem;
     margin: 1rem 0;
@@ -301,8 +291,8 @@ body.loaded .nav-bar.scrolled {
 /* Story */
 
 .story-container {
-    padding: 4rem 2rem;
-    background: #BCD5E3;
+    padding: 8rem 2rem;
+    /* background: #BCD5E3; */
     position: relative;
     
 }
@@ -317,18 +307,18 @@ body.loaded .nav-bar.scrolled {
     color: #2c3e50;
     font-family: 'Playfair Display', serif;
     position: relative;
-    display: inline-block;
+    padding-bottom: 1rem;
 }
 
 .story-header h1::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 90px;
     height: 3px;
-    /* background: #e74c3c; */
+    background: #5ab6ec;
 }
 
 .story-timeline {
@@ -342,7 +332,7 @@ body.loaded .nav-bar.scrolled {
     display: flex;
     gap: 2rem;
     margin-bottom: 4rem;
-    background: white;
+    background: #5ab6ec;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -356,7 +346,7 @@ body.loaded .nav-bar.scrolled {
 .story-icon {
     flex: 0 0 80px;
     height: 80px;
-    background: #BCD5E3;
+    background: #5ab6ec;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -379,7 +369,7 @@ body.loaded .nav-bar.scrolled {
 }
 
 .story-content p {
-    color: #7f8c8d;
+    color: #343a3b;
     line-height: 1.8;
     font-size: 1.1rem;
 }
@@ -438,7 +428,11 @@ body.loaded .nav-bar.scrolled {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 1000;
+    z-index: 999;
+}
+.modal-open .floating-container {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .main-floating-button {
@@ -543,7 +537,7 @@ body.loaded .nav-bar.scrolled {
 
 /* Safe */
 .safety-container {
-    padding: 80px 20px;
+    padding: 120px 20px;
     background: #f9f9f9;
     min-height: 100vh;
 }
@@ -554,10 +548,23 @@ body.loaded .nav-bar.scrolled {
     text-align: center;
 }
 
-h1 {
+.safety-content h1 {
     color: #2c3e50;
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    padding-bottom: 0.6rem;
+    margin-bottom: 10px;
+}
+.safety-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #BCD5E3;
 }
 
 .commitment-text {
@@ -619,7 +626,7 @@ h1 {
 
 /* Blog */
 .blog-container {
-  padding: 4rem 2rem;
+  padding: 8rem 2rem;
   background: #f9f9f9;
 }
 
@@ -653,6 +660,7 @@ h1 {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .blog-card {
@@ -747,18 +755,30 @@ h1 {
 }
 /* Connect */
 .activities-container {
-    padding: 4rem 2rem;
-    background: #fff8f8;
+    padding: 8rem 2rem;
+    background: white;
     min-height: 100vh;
 }
 
 .main-title {
     text-align: center;
     font-size: 2.5rem;
-    color: #e74c3c !important;
+    color: #2c3e50 !important;
     margin-bottom: 2rem;
     font-family: 'Playfair Display', serif;
-    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 1rem;
+    
+}
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #1976D2;
 }
 
 .activity-content {
@@ -798,14 +818,14 @@ h1 {
 
 .stat-icon {
     font-size: 3rem;
-    color: #e74c3c;
+    color: #1976D2;
     margin-bottom: 1rem;
 }
 
 .highlight-section {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(45deg, #e74c3c, #ff6b6b);
+    background: linear-gradient(45deg, #8fbbe7, #1976D2);
     color: white;
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -827,7 +847,7 @@ h1 {
     gap: 10px;
     margin: 0 auto;
     padding: 1rem 2.5rem;
-    background: #e74c3c;
+    background: #4c9ae9;
     color: white;
     border: none;
     border-radius: 30px;
@@ -837,7 +857,7 @@ h1 {
 }
 
 .cta-button:hover {
-    background: #c0392b;
+    background: #1976D2;
     transform: scale(1.05);
 }
 
@@ -1209,17 +1229,18 @@ h1 {
 }
 
 /*ServiceModal */
-/* ServiceModal.css */
 .modal-overlay {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
     justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    
 }
 
 .modal-content {
@@ -1256,9 +1277,26 @@ h1 {
 }
 /*servicePage */
 .service-page {
-    padding: 2rem;
+    padding: 8rem 5rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+.service-page h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    padding-bottom: 1rem;
+}
+.service-page h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #2196F3;
 }
 
 .services-grid {
@@ -1270,9 +1308,32 @@ h1 {
 
 .service-card {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+}
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.service-card h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .booking-button {
@@ -1343,11 +1404,11 @@ h1 {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 5rem;
 }
 /*Gallery */
 .gallery-container {
-    padding: 2rem;
+    padding: 9rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1386,13 +1447,13 @@ h1 {
 }
 
 .overlay {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -1400,15 +1461,19 @@ h1 {
 
 .enlarged-container {
     position: relative;
-    max-width: 95%;
-    max-height: 95%;
-    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
     overflow: auto;
     width: 90vw;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: white;
+    /* Nền trắng cho modal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng để nổi bật */
 }
 
 .enlarged-image {
@@ -1422,7 +1487,7 @@ h1 {
 
 .zoom-controls {
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
     display: flex;
     gap: 10px;
@@ -1442,7 +1507,6 @@ h1 {
     background: #2196F3;
 }
 
-/* Nút đóng (dấu X) */
 .close-button {
     position: absolute;
     top: 20px;
@@ -1483,30 +1547,5 @@ h1 {
         font-size: 1.2rem;
     }
 }
-/*backbutton */
-.back-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #3b97e3;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-}
-
-.back-button:hover {
-    background: #2284e6; 
-    transform: scale(1.1);
-    transition: background 0.3s ease, transform 0.3s ease;
-}
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import BackButton from "./BackButton";
+import Navbar from "./Navbar";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -41,54 +41,58 @@ const Gallery = () => {
   };
 
   return (
-    <div className="gallery-container">
-      <BackButton />
-      <div className="image-grid">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className={`image-item ${loaded ? "loaded" : ""}`}
-            style={{ transitionDelay: `${index * 0.1}s` }}
-            onClick={() => handleImageClick(img)}
-          >
-            <img src={img} alt={`Gallery item ${index}`} />
-          </div>
-        ))}
-      </div>
+    <div>
+      <Navbar color="#BCD5E3" />
+      <div className="gallery-container">
+        <div className="image-grid">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className={`image-item ${loaded ? "loaded" : ""}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
+              onClick={() => handleImageClick(img)}
+            >
+              <img src={img} alt={`Gallery item ${index}`} />
+            </div>
+          ))}
+        </div>
 
-      {selectedImage && (
-        <div className="overlay" onClick={() => setSelectedImage(null)}>
-          <div
-            className="enlarged-container"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={selectedImage}
-              alt="Enlarged"
-              className="enlarged-image"
-              style={{ transform: `scale(${zoomLevel})` }}
-              onWheel={handleZoom}
-            />
-            <div className="zoom-controls">
-              <button
-                onClick={() => setZoomLevel((prev) => Math.min(prev + 0.1, 3))}
-              >
-                +
-              </button>
-              <button
-                onClick={() =>
-                  setZoomLevel((prev) => Math.max(prev - 0.1, 0.5))
-                }
-              >
-                -
+        {selectedImage && (
+          <div className="overlay" onClick={() => setSelectedImage(null)}>
+            <div
+              className="enlarged-container"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
+                alt="Enlarged"
+                className="enlarged-image"
+                style={{ transform: `scale(${zoomLevel})` }}
+                onWheel={handleZoom}
+              />
+              <div className="zoom-controls">
+                <button
+                  onClick={() =>
+                    setZoomLevel((prev) => Math.min(prev + 0.1, 3))
+                  }
+                >
+                  +
+                </button>
+                <button
+                  onClick={() =>
+                    setZoomLevel((prev) => Math.max(prev - 0.1, 0.5))
+                  }
+                >
+                  -
+                </button>
+              </div>
+              <button className="close-button" onClick={handleClose}>
+                &times;
               </button>
             </div>
-            <button className="close-button" onClick={handleClose}>
-              &times;
-            </button>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

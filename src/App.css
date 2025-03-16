@@ -63,7 +63,7 @@ body.loaded .nav-bar.scrolled {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     font-size: 18px;
 }
 .nav-links a {
@@ -1185,14 +1185,11 @@ body.loaded .nav-bar.scrolled {
 @media (max-width: 768px) {
     .slide-content {
         flex-direction: column;
-        /* Chuyển thành layout dọc trên mobile */
         text-align: center;
-        /* Căn giữa nội dung */
     }
 
     .text-content {
         text-align: center;
-        /* Căn giữa nội dung trên mobile */
     }
 
     .main-title {
@@ -1471,9 +1468,7 @@ body.loaded .nav-bar.scrolled {
     justify-content: center;
     align-items: center;
     background: white;
-    /* Nền trắng cho modal */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Đổ bóng để nổi bật */
 }
 
 .enlarged-image {

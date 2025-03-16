@@ -6,7 +6,6 @@ const MainContent = () => {
   return (
     <div className="container">
       <div className="background-image"></div>
-      {/* Main Content */}
       <div className="main-content">
         <div className="vision-section">
           <h1>Vision</h1>

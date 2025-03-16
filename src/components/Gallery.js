@@ -28,7 +28,7 @@ const Gallery = () => {
 
   const handleImageClick = (img) => {
     setSelectedImage(img);
-    setZoomLevel(1); // Reset zoom level khi chọn ảnh mới
+    setZoomLevel(1);
   };
 
   const handleZoom = (e) => {
